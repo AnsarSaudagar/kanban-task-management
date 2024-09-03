@@ -1,0 +1,11 @@
+<div class="bg-[#2B2C37] h-full border-[#3E3F4E] border-2 border-t-[0] w-[19vw] border-b-[0px]">
+    <p class="text-[#828FA3] ml-4 pt-4 mb-4 text-[13px] font-bold">ALL BOARDS (3)</p>
+    <app-side-bar-link *ngFor="let link of boardNames; let i = index">
+        <a [routerLink]="['main', i]"
+            class="bg-[#635FC7] text-white my-5 font-bold flex w-[80%] h-11 rounded-tr-3xl rounded-br-3xl justify-start pl-7 items-center">
+            {{link}}
+        </a>
+    </app-side-bar-link>
+
+
+</div>

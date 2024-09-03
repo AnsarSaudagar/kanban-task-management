@@ -1,0 +1,7 @@
+<select [(ngModel)]="model"
+    class="w-full h-9 px-2 text-white border-2 border-[#828fa366] bg-[#2B2C37] mt-4 rounded-lg font-semibold text-[14px]"
+    (change)="onChangeDropdown()">
+    <option *ngFor="let item of columnsArr" [value]="item" class=" m-4" (click)="onClickDropdown()">
+        {{item}}
+    </option>
+</select>

@@ -1,0 +1,19 @@
+<div
+    class="overflow-y-auto  w-[81vw]  bg-[#20212C] max-w-full h-[85vh] border-[#3E3F4E] border-2 flex border-l-[0] border-t-[0] border-b-[0px]">
+    <app-content-column class="w-[25%] mx-7" *ngFor="let col of columnsTemp">
+        <div class="w-full flex mt-4">
+            <div class="w-[100%] h-fit ">
+                <div class="flex items-center">
+                    <div class="rounded-full bg-[#49C4E5] h-4 w-4"></div>
+                    <p class="text-[#828FA3] text-[14px] font-bold ml-3">{{col.name}} ({{col.tasks.length}})</p>
+                </div>
+                <app-task-card [singleTask]="task" [taskIndex]="i"
+                    *ngFor="let task of col.tasks; let i = index"></app-task-card>
+            </div>
+        </div>
+        <!-- <app-add-task-modal></app-add-task-modal> -->
+    </app-content-column>
+    <!-- <app-modal></app-modal> -->
+    <router-outlet></router-outlet>
+
+</div>
